@@ -1,17 +1,17 @@
 .container{
   width: 100%;
-  height: 100vh;
   background-color: #121214;
 }
 
-header{
+.container > header{
   width: 100%;
   height: 283px;
   background-color: #17171A;
   color: whitesmoke;
+  margin-bottom: 50px;
 }
 
-header .title-wraper{
+.container > header .title-wraper{
   width: 100%;
   height: 50%;
   display: flex;
@@ -19,29 +19,29 @@ header .title-wraper{
   justify-content: center;
 }
 
-header .title-wraper h1{
+.container > header .title-wraper h1{
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 500;
   font-size: 40px;
 }
 
-header .title-wraper h1 span{
+.container > header .title-wraper h1 span{
   color: #e07b67;
 }
 
-header .search-wraper{
+.container > header .search-wraper{
   width: 100%;
   height: 50%;
   display: flex;
   justify-content: center;
 }
 
-header .search-wraper .input-wraper{
+.container > header .search-wraper .input-wraper{
   position: relative;
   width: 55%;
 }
 
-header .search-wraper .input-wraper input{
+.container > header .search-wraper .input-wraper input{
   width: 100%;
   height: 56px;
   border-radius: 8px;
@@ -55,10 +55,75 @@ header .search-wraper .input-wraper input{
   padding-left: 5%;
 }
 
-header .search-wraper .input-wraper label{
+.container > header .search-wraper .input-wraper label{
   font-family: 'Inter', sans-serif;
   font-size: 20px;
   position: absolute;
   transition: top 0.3s;
   left: 5%;
+}
+
+.container-blogs{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 20px;
+  align-items: center;
+}
+
+.container-blogs .blog-wraper{
+  width: 75%;
+  height: 203px;
+  border: #E07B67 2px solid;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.container-blogs .blog-wraper header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.container-blogs .blog-wraper header .date-wraper{
+  color: #c76e5d;
+  font-family: 'Inter', sans-serif;
+}
+
+.container-blogs .blog-wraper header .like-wraper input[type="checkbox"]{
+  display: none;
+}
+
+.container-blogs .blog-wraper header .like-wraper label{
+  cursor: pointer;
+  width: 28px;
+  height: 23.99px;
+}
+
+.container-blogs .blog-wraper header .like-wraper label svg{
+  width: 24px;
+  transition: transform 0.3s;
+  margin-top: -5px;
+}
+
+.container-blogs .blog-wraper .like-wraper label:hover svg{
+  transform: scale(1.09);
+}
+
+.container-blogs .blog-wraper .container-text{
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.container-blogs .blog-wraper .container-text header h3{
+  font-weight: 500;
+}
+
+.container-blogs .blog-wraper .container-text section{
+  color: #AFABB6;
 }

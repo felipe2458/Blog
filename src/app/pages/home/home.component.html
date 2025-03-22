@@ -15,6 +15,112 @@
   </header>
 
   <section class="container-blogs">
+    <div class="blog-wraper">
+      <header>
+        <div class="date-wraper">
+          <p>17 de ago, 2024</p>
+        </div><!-- date-wraper -->
 
+        <div class="like-wraper">
+          <div class="input-wraper">
+            <input type="checkbox" id="like" [(ngModel)]="likesBlogs[0].like" (change)="saveLikeStorage(0)">
+
+            <label for="like" title="salvar">
+              @if(likesBlogs[0].like){
+                <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M28 7.75C28 16.5 15.0262 23.5825 14.4737 23.875C14.3281 23.9533 14.1654 23.9943 14 23.9943C13.8346 23.9943 13.6719 23.9533 13.5262 23.875C12.9738 23.5825 0 16.5 0 7.75C0.00231592 5.69528 0.819575 3.72539 2.27248 2.27248C3.72539 0.819575 5.69528 0.00231592 7.75 0C10.3313 0 12.5912 1.11 14 2.98625C15.4088 1.11 17.6688 0 20.25 0C22.3047 0.00231592 24.2746 0.819575 25.7275 2.27248C27.1804 3.72539 27.9977 5.69528 28 7.75Z" fill="#E07B67"/>
+                </svg>
+              }@else{
+                <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.25 0C17.6688 0 15.4088 1.11 14 2.98625C12.5912 1.11 10.3313 0 7.75 0C5.69528 0.00231592 3.72539 0.819575 2.27248 2.27248C0.819575 3.72539 0.00231592 5.69528 0 7.75C0 16.5 12.9738 23.5825 13.5262 23.875C13.6719 23.9533 13.8346 23.9943 14 23.9943C14.1654 23.9943 14.3281 23.9533 14.4737 23.875C15.0262 23.5825 28 16.5 28 7.75C27.9977 5.69528 27.1804 3.72539 25.7275 2.27248C24.2746 0.819575 22.3047 0.00231592 20.25 0ZM14 21.85C11.7175 20.52 2 14.4613 2 7.75C2.00198 6.22561 2.60842 4.76423 3.68633 3.68633C4.76423 2.60842 6.22561 2.00198 7.75 2C10.1812 2 12.2225 3.295 13.075 5.375C13.1503 5.55841 13.2785 5.71528 13.4432 5.82569C13.6079 5.93609 13.8017 5.99503 14 5.99503C14.1983 5.99503 14.3921 5.93609 14.5568 5.82569C14.7215 5.71528 14.8497 5.55841 14.925 5.375C15.7775 3.29125 17.8188 2 20.25 2C21.7744 2.00198 23.2358 2.60842 24.3137 3.68633C25.3916 4.76423 25.998 6.22561 26 7.75C26 14.4513 16.28 20.5188 14 21.85Z" fill="#E07B67"/>
+                </svg>
+              }
+            </label>
+          </div><!-- input-wraper -->
+        </div><!-- like-wraper -->
+      </header>
+
+      <div class="container-text">
+        <header>
+          <h3>O que é linguagem de programação? Conheça as principais</h3>
+        </header>
+
+        <section>
+          <p>Uma das mais populares vertentes da tecnologia da informação, a área de programação segue tendo muita demanda de trabalho justamente pela velocidade com que dispositivos tecnológicos vêm avançando.</p>
+        </section>
+      </div><!-- container-text -->
+    </div><!-- blog-wraper -->
+
+    <div class="blog-wraper">
+      <header>
+        <div class="date-wraper">
+          <p>12 de jul, 2024</p>
+        </div><!-- date-wraper -->
+
+        <div class="like-wraper">
+          <div class="input-wraper">
+            <input type="checkbox" id="like1" [(ngModel)]="likesBlogs[1].like" (change)="saveLikeStorage(1)">
+
+            <label for="like1" title="salvar">
+              @if(likesBlogs[1].like){
+                <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M28 7.75C28 16.5 15.0262 23.5825 14.4737 23.875C14.3281 23.9533 14.1654 23.9943 14 23.9943C13.8346 23.9943 13.6719 23.9533 13.5262 23.875C12.9738 23.5825 0 16.5 0 7.75C0.00231592 5.69528 0.819575 3.72539 2.27248 2.27248C3.72539 0.819575 5.69528 0.00231592 7.75 0C10.3313 0 12.5912 1.11 14 2.98625C15.4088 1.11 17.6688 0 20.25 0C22.3047 0.00231592 24.2746 0.819575 25.7275 2.27248C27.1804 3.72539 27.9977 5.69528 28 7.75Z" fill="#E07B67"/>
+                </svg>
+              }@else{
+                <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.25 0C17.6688 0 15.4088 1.11 14 2.98625C12.5912 1.11 10.3313 0 7.75 0C5.69528 0.00231592 3.72539 0.819575 2.27248 2.27248C0.819575 3.72539 0.00231592 5.69528 0 7.75C0 16.5 12.9738 23.5825 13.5262 23.875C13.6719 23.9533 13.8346 23.9943 14 23.9943C14.1654 23.9943 14.3281 23.9533 14.4737 23.875C15.0262 23.5825 28 16.5 28 7.75C27.9977 5.69528 27.1804 3.72539 25.7275 2.27248C24.2746 0.819575 22.3047 0.00231592 20.25 0ZM14 21.85C11.7175 20.52 2 14.4613 2 7.75C2.00198 6.22561 2.60842 4.76423 3.68633 3.68633C4.76423 2.60842 6.22561 2.00198 7.75 2C10.1812 2 12.2225 3.295 13.075 5.375C13.1503 5.55841 13.2785 5.71528 13.4432 5.82569C13.6079 5.93609 13.8017 5.99503 14 5.99503C14.1983 5.99503 14.3921 5.93609 14.5568 5.82569C14.7215 5.71528 14.8497 5.55841 14.925 5.375C15.7775 3.29125 17.8188 2 20.25 2C21.7744 2.00198 23.2358 2.60842 24.3137 3.68633C25.3916 4.76423 25.998 6.22561 26 7.75C26 14.4513 16.28 20.5188 14 21.85Z" fill="#E07B67"/>
+                </svg>
+              }
+            </label>
+          </div><!-- input-wraper -->
+        </div><!-- like-wraper -->
+      </header>
+
+      <div class="container-text">
+        <header>
+          <h3>GitHub agora permite fazer login sem precisar de senha</h3>
+        </header>
+
+        <section>
+          <p>O GitHub anunciou nesta quarta-feira (12) o acesso a partir das passkeys, método de autenticação sem senhas. A novidade está disponível em uma versão beta pública e pode substituir a autenticação em dois fatores.</p>
+        </section>
+      </div><!-- container-text -->
+    </div><!-- blog-wraper -->
+
+    <div class="blog-wraper">
+      <header>
+        <div class="date-wraper">
+          <p>21 de jun, 2024</p>
+        </div><!-- date-wraper -->
+
+        <div class="like-wraper">
+          <div class="input-wraper">
+            <input type="checkbox" id="like2" [(ngModel)]="likesBlogs[2].like" (change)="saveLikeStorage(2)">
+
+            <label for="like2" title="salvar">
+              @if(likesBlogs[2].like){
+                <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M28 7.75C28 16.5 15.0262 23.5825 14.4737 23.875C14.3281 23.9533 14.1654 23.9943 14 23.9943C13.8346 23.9943 13.6719 23.9533 13.5262 23.875C12.9738 23.5825 0 16.5 0 7.75C0.00231592 5.69528 0.819575 3.72539 2.27248 2.27248C3.72539 0.819575 5.69528 0.00231592 7.75 0C10.3313 0 12.5912 1.11 14 2.98625C15.4088 1.11 17.6688 0 20.25 0C22.3047 0.00231592 24.2746 0.819575 25.7275 2.27248C27.1804 3.72539 27.9977 5.69528 28 7.75Z" fill="#E07B67"/>
+                </svg>
+              }@else{
+                <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.25 0C17.6688 0 15.4088 1.11 14 2.98625C12.5912 1.11 10.3313 0 7.75 0C5.69528 0.00231592 3.72539 0.819575 2.27248 2.27248C0.819575 3.72539 0.00231592 5.69528 0 7.75C0 16.5 12.9738 23.5825 13.5262 23.875C13.6719 23.9533 13.8346 23.9943 14 23.9943C14.1654 23.9943 14.3281 23.9533 14.4737 23.875C15.0262 23.5825 28 16.5 28 7.75C27.9977 5.69528 27.1804 3.72539 25.7275 2.27248C24.2746 0.819575 22.3047 0.00231592 20.25 0ZM14 21.85C11.7175 20.52 2 14.4613 2 7.75C2.00198 6.22561 2.60842 4.76423 3.68633 3.68633C4.76423 2.60842 6.22561 2.00198 7.75 2C10.1812 2 12.2225 3.295 13.075 5.375C13.1503 5.55841 13.2785 5.71528 13.4432 5.82569C13.6079 5.93609 13.8017 5.99503 14 5.99503C14.1983 5.99503 14.3921 5.93609 14.5568 5.82569C14.7215 5.71528 14.8497 5.55841 14.925 5.375C15.7775 3.29125 17.8188 2 20.25 2C21.7744 2.00198 23.2358 2.60842 24.3137 3.68633C25.3916 4.76423 25.998 6.22561 26 7.75C26 14.4513 16.28 20.5188 14 21.85Z" fill="#E07B67"/>
+                </svg>
+              }
+            </label>
+          </div><!-- input-wraper -->
+        </div><!-- like-wraper -->
+      </header>
+
+      <div class="container-text">
+        <header>
+          <h3>Por que os hiperlinks são azuis em sua maioria?</h3>
+        </header>
+
+        <section>
+          <p>Quem navega na internet, certamente já percebeu que ela conta com diversos recursos para tornar a nossa vida mais fácil. Entre essas opções podemos mencionar os hiperlinks – uma palavra ou termo clicável que direciona o leitor.</p>
+        </section>
+      </div><!-- container-text -->
+    </div><!-- blog-wraper -->
   </section><!-- container-blogs -->
 </div><!-- container -->
