@@ -1,0 +1,20 @@
+<div class="container">
+  <header>
+    <div class="title-wraper">
+      <h1>
+        <span>Code</span>Lab
+      </h1>
+    </div><!-- title-wraper -->
+
+    <div class="search-wraper">
+      <div class="input-wraper">
+        <input type="search" id="search" [(ngModel)]="search" (focus)="checkSearchEmpty(true, false)" (blur)="checkSearchEmpty(false, true)">
+        <label for="search" [ngStyle]="{ top: valueTop + '%' }">Pesquisar no Blog</label>
+      </div><!-- input-wraper -->
+    </div><!--  search-wraper -->
+  </header>
+
+  <section class="container-blogs">
+
+  </section><!-- container-blogs -->
+</div><!-- container -->
