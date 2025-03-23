@@ -38,7 +38,7 @@
 
 .container > header .search-wraper .input-wraper{
   position: relative;
-  width: 55%;
+  width: 65%;
 }
 
 .container > header .search-wraper .input-wraper input{
@@ -126,4 +126,72 @@
 
 .container-blogs .blog-wraper .container-text section{
   color: #AFABB6;
+}
+
+@media screen and (max-width: 1000px){
+  .container > header .search-wraper .input-wraper{
+    width: 80%;
+  }
+
+  .container-blogs .blog-wraper{
+    height: 210px;
+  }
+
+  .container-blogs .blog-wraper > header{
+    margin-bottom: 10px;
+  }
+
+  .container-blogs .blog-wraper header{
+    margin-bottom: 8px;
+  }
+
+  .container-blogs .blog-wraper header .like-wraper label svg{
+    width: 20px;
+    margin-top: 0;
+  }
+
+  .container-blogs .blog-wraper header .date-wraper p{
+    font-size: 14px;
+  }
+
+  .container-blogs .blog-wraper .container-text header h3{
+    font-size: 17px;
+  }
+
+  .container-blogs .blog-wraper .container-text section p{
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .container > header{
+    height: 208px;
+  }
+
+  .container > header .search-wraper .input-wraper input{
+    height: 49px;
+  }
+
+  .container > header .search-wraper .input-wraper label{
+    font-size: 15px;
+  }
+
+  .container-blogs .blog-wraper{
+    width: 90%;
+  }
+
+  .container-blogs .blog-wraper .container-text header h3{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .container > header .title-wraper h1{
+    font-size: 30px;
+  }
+
+  .container-blogs .blog-wraper{
+    width: 95%;
+    height: 280px;
+  }
 }
