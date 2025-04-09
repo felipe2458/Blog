@@ -176,6 +176,10 @@
     font-size: 15px;
   }
 
+  .container > header .search-wraper .input-wraper input{
+    font-size: 16px;
+  }
+
   .container-blogs .blog-wraper{
     width: 90%;
   }
