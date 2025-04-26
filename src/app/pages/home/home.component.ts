@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { likesBlogs } from '../../interfaces/interface';
@@ -20,8 +20,6 @@ export class HomeComponent {
     this.likesBlogs[0].like = likesBlogs[0].like ? JSON.parse(likesBlogs[0].like) : false;
     this.likesBlogs[1].like = likesBlogs[1].like ? JSON.parse(likesBlogs[1].like) : false;
     this.likesBlogs[2].like = likesBlogs[2].like ? JSON.parse(likesBlogs[2].like) : false;
-
-    this.onResize();
   }
 
   search: string = '';
@@ -29,13 +27,13 @@ export class HomeComponent {
   screenWidth: number = window.innerWidth;
 
   checkSearchEmpty(focus: boolean, blur: boolean): void {
-    if(this.screenWidth >= 800){
-      if(this.search === '' && focus) this.valueTop = -20;
-      if(this.search === '' && blur) this.valueTop = 10;
-    }else{
-      if(this.search === '' && focus) this.valueTop = -20;
-      if(this.search === '' && blur) this.valueTop = 13;
-    }
+    if(focus) this.valueTop = -20;
+
+    if(blur && this.search.trim() === ''){
+      this.valueTop = 13;
+      this.search = '';
+      console.log("Ola mundo!");
+    };
   }
 
   likesBlogs: likesBlogs[] = [
@@ -46,11 +44,5 @@ export class HomeComponent {
 
   saveLikeStorage(id: number): void{
     localStorage.setItem(`likesBlogs${id}`, JSON.stringify(this.likesBlogs[id].like));
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(): void{
-    this.screenWidth = window.innerWidth;
-    this.valueTop = 13;
   }
 }

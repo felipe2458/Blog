@@ -55,6 +55,16 @@
   padding-left: 5%;
 }
 
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .container > header .search-wraper .input-wraper label{
   font-family: 'Inter', sans-serif;
   font-size: 20px;
